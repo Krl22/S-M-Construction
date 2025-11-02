@@ -65,7 +65,7 @@ export default function Home() {
     <section className="mx-auto max-w-6xl px-6 py-16">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
-          <h1 className="text-4xl font-semibold tracking-tight text-primary">
+          <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-primary">
             Reliable interior remodeling and maintenance services
           </h1>
           <p className="mt-4 text-muted-foreground">
@@ -83,7 +83,7 @@ export default function Home() {
                 Contact Us
               </Button>
               {contactOpen && (
-                <div className="absolute left-0 z-20 mt-2 w-56 overflow-hidden rounded-md border bg-white shadow-md">
+                <div className="absolute left-0 z-20 mt-2 w-56 sm:w-64 overflow-hidden rounded-md border bg-white shadow-md">
                   <a
                     href={whatsappUrl}
                     target="_blank"
@@ -118,21 +118,9 @@ export default function Home() {
               <Button variant="outline">View Services</Button>
             </Link>
           </div>
-          <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {[
-              "On-time, on-budget delivery",
-              "Clean, respectful crews",
-              "Transparent quotes",
-              "Warranty on workmanship",
-            ].map((item) => (
-              <li key={item} className="rounded-md border p-3 text-sm">
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
         <div
-          className="relative aspect-4/3 w-full overflow-hidden rounded-lg border"
+          className="relative aspect-4/3 sm:aspect-16/9 w-full overflow-hidden rounded-lg border"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -152,7 +140,7 @@ export default function Home() {
           <div className="absolute left-3 top-1/2 -translate-y-1/2">
             <Button
               size="icon"
-              className="bg-black/40 text-white hover:bg-black/60"
+              className="h-10 w-10 sm:h-11 sm:w-11 bg-black/40 text-white hover:bg-black/60"
               onClick={() =>
                 setIndex((i) => (i - 1 + slides.length) % slides.length)
               }
@@ -163,7 +151,7 @@ export default function Home() {
           <div className="absolute right-3 top-1/2 -translate-y-1/2">
             <Button
               size="icon"
-              className="bg-black/40 text-white hover:bg-black/60"
+              className="h-10 w-10 sm:h-11 sm:w-11 bg-black/40 text-white hover:bg-black/60"
               onClick={() => setIndex((i) => (i + 1) % slides.length)}
             >
               <ChevronRight className="size-5" />
@@ -174,7 +162,7 @@ export default function Home() {
               <button
                 key={i}
                 aria-label={`Go to slide ${i + 1}`}
-                className={`h-2 w-2 rounded-full ${
+                className={`h-3 w-3 sm:h-2 sm:w-2 rounded-full ${
                   i === index ? "bg-white" : "bg-white/50"
                 }`}
                 onClick={() => setIndex(i)}
