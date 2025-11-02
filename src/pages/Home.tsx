@@ -120,7 +120,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="relative aspect-4/3 sm:aspect-16/9 w-full overflow-hidden rounded-lg border"
+          className="relative aspect-4/3 sm:aspect-video w-full overflow-hidden rounded-lg border"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
